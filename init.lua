@@ -206,7 +206,12 @@ local config = {
       ["<leader>bj"] = { "<cmd>BufferLinePick<cr>", desc = "Pick to jump" },
       ["<leader>bt"] = { "<cmd>BufferLineSortByTabs<cr>", desc = "Sort by tabs" },
       -- quick save
-      -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+      ["<C-s>"] = { ":w!<cr><C-s>", desc = "Save File" },  -- change description but the same command
+      ["<C-n>"] = { ":nohlsearch<CR>" , desc = "Clear search highlights" }, -- clear search highlights
+    },
+    i = {
+      ["<C-n>"] = { "<Cmd>:exe \"normal <C-n>\"<CR>" }, -- executes clear search highlights from the insert mode
+      ["<C-s>"] = { "<Cmd>:exe \"normal <C-s>\"<CR>", desc = "Save File" },  -- change description but the same command
     },
     t = {
       -- setting a mapping to false will disable it
