@@ -208,6 +208,8 @@ local config = {
       -- quick save
       ["<C-s>"] = { ":w!<cr><C-s>", desc = "Save File" },  -- change description but the same command
       ["<C-n>"] = { ":nohlsearch<CR>" , desc = "Clear search highlights" }, -- clear search highlights
+      ["<C-t>"] = { "<Cmd>exe \"ToggleTerm\"<CR>" , desc = "ToggleTerm" },
+      ["s"] = { "i<CR><Esc>" , desc = "Split two lines" },
     },
     i = {
       ["<C-n>"] = { "<Cmd>:exe \"normal <C-n>\"<CR>" }, -- executes clear search highlights from the insert mode
